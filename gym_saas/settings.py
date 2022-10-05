@@ -150,8 +150,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('DJANGO_DATABASE_NAME', 'gym_saas'),
         'USER': os.environ.get('DJANGO_DATABASE_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DJANGO_DATABASE_PASSWORD', '***'),
-        'HOST': os.environ.get('DJANGO_DATABASE_HOST', 'localhost'),
+        'PASSWORD': os.environ.get('DJANGO_DATABASE_PASSWORD', 'postgres'),
+        'HOST': os.environ.get('DJANGO_DATABASE_HOST', 'db'),
         'PORT': os.environ.get('DJANGO_DATABASE_PORT', '5432'),
     }
 }
@@ -323,8 +323,8 @@ SPECTACULAR_SETTINGS = {
 
 
 # Celery setup (using redis)
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 
 # Wagtail config
 
